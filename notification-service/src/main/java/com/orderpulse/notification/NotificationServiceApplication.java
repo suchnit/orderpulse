@@ -1,4 +1,4 @@
-package com.orderpulse.notification_service;
+package com.orderpulse.notification;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

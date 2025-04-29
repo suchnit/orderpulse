@@ -1,10 +1,10 @@
-package com.orderpulse.discovery_server;
+package com.orderpulse.inventory;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DiscoveryServerApplicationTests {
+class InventoryServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
