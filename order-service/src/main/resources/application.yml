@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: order-service
+  kafka:
+    bootstrap-servers: localhost:9092
+resilience4j:
+  circuitbreaker:
+    instances:
+      orderServiceCB:
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+  retry:
+    instances:
+      orderServiceRetry:
+        maxAttempts: 3
+        waitDuration: 500ms
