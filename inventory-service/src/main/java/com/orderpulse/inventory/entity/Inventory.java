@@ -1,4 +1,4 @@
-package com.orderpulse.inventory.entities;
+package com.orderpulse.inventory.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -11,6 +11,13 @@ public class Inventory {
     @Id
     @UuidGenerator
     private UUID id;
+    private String productCode;
+    private int quantity;
+
+    public Inventory(String productCode, int quantity) {
+        this.productCode = productCode;
+        this.quantity = quantity;
+    }
 
     public String getProductCode() {
         return productCode;
@@ -25,14 +32,6 @@ public class Inventory {
     }
 
     public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    private String productCode;
-    private int quantity;
-
-    public Inventory(String productCode, int quantity) {
-        this.productCode = productCode;
         this.quantity = quantity;
     }
 }

@@ -1,6 +1,6 @@
 package com.orderpulse.inventory.repository;
 
-import com.orderpulse.inventory.entities.Inventory;
+import com.orderpulse.inventory.entity.Inventory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

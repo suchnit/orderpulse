@@ -1,7 +1,7 @@
 package com.orderpulse.inventory.mapper.impl;
 
 import com.orderpulse.inventory.dto.InventoryDto;
-import com.orderpulse.inventory.entities.Inventory;
+import com.orderpulse.inventory.entity.Inventory;
 import com.orderpulse.inventory.mapper.InventoryMapper;
 import org.springframework.stereotype.Component;
 

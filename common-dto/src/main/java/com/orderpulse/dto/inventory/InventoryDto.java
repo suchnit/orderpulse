@@ -1,12 +1,7 @@
 package com.orderpulse.inventory.dto;
 
-import lombok.Builder;
-import lombok.Data;
-
 import java.io.Serializable;
 
-@Data
-@Builder
 public class InventoryDto implements Serializable {
     private String productCode;
     private int quantity;
