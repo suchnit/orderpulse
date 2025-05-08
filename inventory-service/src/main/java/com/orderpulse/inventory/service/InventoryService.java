@@ -1,6 +1,6 @@
 package com.orderpulse.inventory.service;
 
-import com.orderpulse.inventory.dto.InventoryDto;
+import com.orderpulse.dto.inventory.InventoryDto;
 import com.orderpulse.inventory.entity.Inventory;
 import com.orderpulse.inventory.mapper.InventoryMapper;
 import com.orderpulse.inventory.repository.InventoryRepository;

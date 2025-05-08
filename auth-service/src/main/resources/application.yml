@@ -1,11 +1,8 @@
 server:
-  port: 8082
+  port: 8081
 spring:
   application:
-    name: inventory-service
-  cloud:
-    config:
-      enabled: false
+    name: auth-service
   datasource:
     url: jdbc:postgresql://localhost:5432/opdb
     username: postgres
@@ -25,21 +22,15 @@ resilience4j:
         slidingWindowSize: 5
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
+      inventory-service:
+        registerHealthIndicator: true
+        slidingWindowSize: 5
+        failureRateThreshold: 50
   retry:
     instances:
       orderServiceRetry:
         maxAttempts: 3
         waitDuration: 500ms
-logging:
-  level:
-    root: ERROR
-    org.springframework.web: ERROR
-    com.orderpulse.inventory: DEBUG
-  file:
-    name: logs/inventory.log
-  pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
-    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
 eureka:
   client:
     service-url:

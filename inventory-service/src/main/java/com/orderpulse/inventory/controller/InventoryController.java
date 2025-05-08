@@ -1,6 +1,6 @@
 package com.orderpulse.inventory.controller;
 
-import com.orderpulse.inventory.dto.InventoryDto;
+import com.orderpulse.dto.inventory.InventoryDto;
 import com.orderpulse.inventory.service.InventoryService;
 import org.apache.coyote.BadRequestException;
 import org.springframework.http.ResponseEntity;

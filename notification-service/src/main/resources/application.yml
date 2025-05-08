@@ -1,8 +1,8 @@
 server:
-  port: 8082
+  port: 8083
 spring:
   application:
-    name: inventory-service
+    name: notification-service
   cloud:
     config:
       enabled: false
@@ -34,9 +34,9 @@ logging:
   level:
     root: ERROR
     org.springframework.web: ERROR
-    com.orderpulse.inventory: DEBUG
+    com.orderpulse.notification: DEBUG
   file:
-    name: logs/inventory.log
+    name: logs/notification.log
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

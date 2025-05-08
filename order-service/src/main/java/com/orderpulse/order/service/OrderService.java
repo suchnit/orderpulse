@@ -1,5 +1,6 @@
 package com.orderpulse.order.service;
 
+import com.orderpulse.dto.order.OrderDto;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +16,8 @@ public class OrderService {
 
    @CircuitBreaker(name = "orderServiceCB", fallbackMethod = "fallbackOrder")
    @Retry(name = "orderServiceRetry")
-   public String placeOrder(String order) {
-       kafkaTemplate.send(TOPIC, order);
+   public String placeOrder(OrderDto order) {
+//       kafkaTemplate.send(TOPIC, order);
        return "Order placed successfully";
    }
 

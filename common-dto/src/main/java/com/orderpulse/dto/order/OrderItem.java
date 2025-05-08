@@ -1,15 +1,14 @@
-package com.orderpulse.dto.inventory;
+package com.orderpulse.dto.order;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class InventoryDto {
+public class OrderItem {
     private String productCode;
     private int quantity;
+    private double totalPrice;
 }

@@ -1,5 +1,6 @@
 package com.orderpulse.order.controller;
 
+import com.orderpulse.dto.order.OrderDto;
 import com.orderpulse.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +13,7 @@ public class OrderController {
     private OrderService orderService;
 
     @PostMapping
-    public ResponseEntity<String> placeOrder(@RequestBody String order) {
+    public ResponseEntity<String> placeOrder(@RequestBody OrderDto order) {
         return ResponseEntity.ok(orderService.placeOrder(order));
     }
 }
