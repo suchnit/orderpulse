@@ -13,7 +13,7 @@ public class OrderController {
     private OrderService orderService;
 
     @PostMapping
-    public ResponseEntity<String> placeOrder(@RequestBody OrderDto order) {
+    public ResponseEntity<OrderDto> placeOrder(@RequestBody OrderDto order) {
         return ResponseEntity.ok(orderService.placeOrder(order));
     }
 }

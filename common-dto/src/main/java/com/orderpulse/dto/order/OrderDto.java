@@ -16,5 +16,5 @@ public class OrderDto implements Serializable {
     private String customerEmail;
     private String status;
     private LocalDate createdAt;
-    private List<OrderItem> orderItems;
+    private List<OrderItemDto> orderItemDtos;
 }

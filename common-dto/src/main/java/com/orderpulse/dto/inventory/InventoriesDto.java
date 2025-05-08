@@ -4,10 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Map;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class InventoryDto {
-    String productCode;
-    int quantity;
+public class InventoriesDto {
+    Map<String,Integer> productStock;
 }

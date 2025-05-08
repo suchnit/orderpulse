@@ -1,10 +1,13 @@
 package com.orderpulse.inventory.controller;
 
+import com.orderpulse.dto.inventory.InventoriesDto;
 import com.orderpulse.dto.inventory.InventoryDto;
 import com.orderpulse.inventory.service.InventoryService;
 import org.apache.coyote.BadRequestException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/inventory")
@@ -16,8 +19,14 @@ public class InventoryController {
     }
 
     @GetMapping("/check")
-    public ResponseEntity<InventoryDto> checkInventoryStatus(@RequestParam String productCode) {
-        return ResponseEntity.ok(inventoryService.checkInventory(productCode));
+    public ResponseEntity<Boolean> checkInventoryStatus(@RequestBody InventoriesDto inventoryDto) {
+        return ResponseEntity.ok(inventoryService.checkInventory(inventoryDto));
+    }
+
+    @PutMapping
+    public ResponseEntity<String> update(@RequestBody Map<String, Integer> inventoryMap) {
+        inventoryService.update(inventoryMap);
+        return ResponseEntity.ok("Inventory updated");
     }
 
     @PostMapping(consumes = "application/json")
